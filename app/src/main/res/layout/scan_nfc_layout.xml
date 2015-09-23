@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ピッてしてね"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="問題のNFCを読み取った体"
+        android:id="@+id/button1"
+        android:layout_gravity="center_horizontal"
+        android:onClick="goQuestion" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ゴールのNFCを読み取った体"
+        android:id="@+id/button2"
+        android:layout_gravity="center_horizontal"
+        android:onClick="goResult" />
+
+</LinearLayout>
