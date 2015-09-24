@@ -17,12 +17,12 @@ public class ScanNfcActivity extends Activity {
 
     //NFCをスキャンしたらQuestionクラスに遷移
     public void goQuestion(View view){
-        Intent intent = new Intent(this,Question.class);
+        Intent intent = new Intent(this,QuestionActivity.class);
         startActivity(intent);
     }
 
     public void goResult(View view){
-        Intent intent = new Intent(this,Result.class);
+        Intent intent = new Intent(this,ResultActivity.class);
         startActivity(intent);
     }
 }
