@@ -51,6 +51,10 @@ public class ScanNfcActivity extends Activity {
                 new Intent(getApplicationContext(), getClass()).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP), 0);
     }
 
+    /**
+     * アプリを起動した状態でNFCをスキャンすると実行される処理
+     * @param intent
+     */
     @Override
     protected void onNewIntent(Intent intent) {
         String idm = getIdm(intent);
@@ -61,12 +65,12 @@ public class ScanNfcActivity extends Activity {
             //スキャンしたNFCタグのIDがゴールの物か判定する
             if(idm=="1234567890") {
                 //ResultActivityに遷移
-                Intent intent1 = new Intent(this, Result.class);
+                Intent intent1 = new Intent(this, ResultActivity.class);
                 intent.putExtra("nfcId",idm);
                 startActivity(intent1);
             }else{
                 //QuesionActivityに遷移
-                Intent intent1 = new Intent(this, Question.class);
+                Intent intent1 = new Intent(this, QuestionActivity.class);
                 intent.putExtra("nfcId",idm);
                 startActivity(intent1);
             }
@@ -142,12 +146,12 @@ public class ScanNfcActivity extends Activity {
 
     //NFCをスキャンしたらQuestionクラスに遷移
     public void goQuestion(View view){
-        Intent intent = new Intent(this,Question.class);
+        Intent intent = new Intent(this,QuestionActivity.class);
         startActivity(intent);
     }
 
     public void goResult(View view){
-        Intent intent = new Intent(this,Result.class);
+        Intent intent = new Intent(this,ResultActivity.class);
         startActivity(intent);
     }
 }
