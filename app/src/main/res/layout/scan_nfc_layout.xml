@@ -1,23 +1,29 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/scanbg2">
 
     <TextView
-        android:id="@+id/scan"
+        android:id="@+id/id_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ピッてしてね"
-        />
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:textSize="48dp"
+        android:text="タブレットを\nロゴに当ててみよう！"/>
 
-    <Button
+    <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="問題のNFCを読み取った体"
         android:id="@+id/button1"
-        android:layout_gravity="center_horizontal"
-        android:onClick="goQuestion" />
+        android:background="@null"
+        android:src="@drawable/scanbt"
+        android:onClick="goMap"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -27,4 +33,4 @@
         android:layout_gravity="center_horizontal"
         android:onClick="goResult" />
 
-</LinearLayout>
+</RelativeLayout>
