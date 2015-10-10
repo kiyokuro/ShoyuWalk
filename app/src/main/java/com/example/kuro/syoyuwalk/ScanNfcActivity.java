@@ -15,6 +15,7 @@ import android.nfc.tech.NfcB;
 import android.nfc.tech.NfcF;
 import android.nfc.tech.NfcV;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -63,13 +64,15 @@ public class ScanNfcActivity extends Activity {
             idmView.setText(idm);
 
             //スキャンしたNFCタグのIDがゴールの物か判定する
-            if(idm=="1234567890") {
+            if(idm.equals("47cb7627b2b80")) {
                 //ResultActivityに遷移
+                Log.v("ゴールについたよ★",idm);
                 Intent intent1 = new Intent(this, ResultActivity.class);
                 intent.putExtra("nfcId",idm);
                 startActivity(intent1);
             }else{
                 //QuesionActivityに遷移
+                Log.v("問題にとんだよ★",idm);
                 Intent intent1 = new Intent(this, QuestionActivity.class);
                 intent.putExtra("nfcId",idm);
                 startActivity(intent1);
@@ -152,6 +155,11 @@ public class ScanNfcActivity extends Activity {
 
     public void goResult(View view){
         Intent intent = new Intent(this,ResultActivity.class);
+        startActivity(intent);
+    }
+
+    public void goMap(View view){
+        Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
 }

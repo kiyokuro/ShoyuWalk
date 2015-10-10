@@ -25,7 +25,7 @@ public class ResultActivity extends Activity {
         }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                getApplicationContext(), android.R.layout.simple_list_item_1, list);
+                getApplicationContext(), android.R.layout.test_list_item, list);
 
         GridView gridView = (GridView) findViewById(R.id.gridView);
         gridView.setAdapter(adapter);
