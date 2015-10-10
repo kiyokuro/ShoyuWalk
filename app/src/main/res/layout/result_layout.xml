@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
-    android:background="@drawable/resultBack"
+    android:background="@drawable/result_back"
     android:orientation="vertical"
     android:weightSum="1">
 
@@ -35,6 +35,9 @@
             android:layout_height="310dp"
             android:id="@+id/gridView"
             android:layout_gravity="center"
+            android:numColumns="3"
+            android:verticalSpacing="-13dp"
+            android:horizontalSpacing="40dp"
             android:layout_marginBottom="22dp"/>
     </FrameLayout>
 
